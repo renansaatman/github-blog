@@ -37,6 +37,8 @@ export const SearchInput = styled.input`
   border: 1px solid ${props => props.theme["base-border"]};
   background: ${props => props.theme["base-input"]};
 
+  cursor: pointer;
+
   &::placeholder {
     color: ${props => props.theme["base-label"]};
     line-height: 1.6;
