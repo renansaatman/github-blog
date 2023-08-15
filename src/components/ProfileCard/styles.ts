@@ -3,7 +3,9 @@ import { styled } from "styled-components"
 
 export const Card = styled.div`
   border-radius: 10px;
-  width: 54rem;
+  width: 100%;
+  max-width: 54rem;
+
   height: 13.25rem;
 
   background: ${props => props.theme["base-profile"]};
