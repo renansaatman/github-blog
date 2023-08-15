@@ -1,4 +1,4 @@
-import { HomeContainer, ProfileCard, Avatar, TextArea, Title, Text, InfoArea, Info, ProfileContent, Github, Building, UserGroup } from "./styles"
+import { HomeContainer, ProfileCard, Avatar, TextArea, Title, Text, InfoArea, Info, ProfileContent, Github, Building, UserGroup, TitleAndGithubLink, GithubLink, LinkIcon, LinkSpan } from "./styles"
 
 export function Home() {
   return (
@@ -7,7 +7,13 @@ export function Home() {
         <Avatar src="https://avatars.githubusercontent.com/u/29419643?v=4" alt="" />
         <ProfileContent>
           <TextArea>
-            <Title>Renan Saatman</Title>
+            <TitleAndGithubLink>
+              <Title>Renan Saatman</Title>
+              <GithubLink href="https://github.com/renansaatman" target="_blank">
+                <LinkSpan>github</LinkSpan>
+                <LinkIcon />
+              </GithubLink>
+            </TitleAndGithubLink>
             <Text>
               Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
             </Text>

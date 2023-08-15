@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaGithub, FaBuilding, FaUserGroup } from 'react-icons/fa6'
+import { FaGithub, FaBuilding, FaUserGroup, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 
 
 export const HomeContainer = styled.div`
@@ -39,6 +39,37 @@ export const TextArea = styled.div`
   display: flex;
   flex-direction: column;
   gap: .5rem;
+`
+
+export const TitleAndGithubLink = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 2rem;
+`
+
+export const GithubLink = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1.6;
+
+  &:hover {
+    border-bottom: 1px solid ${props => props.theme.blue};
+  }
+`
+
+export const LinkSpan = styled.span`
+  color: ${props => props.theme.blue};
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: default;
+`
+
+export const LinkIcon = styled(FaArrowUpRightFromSquare)`
+  color: ${props => props.theme.blue};
+  font-size: 0.75rem;
 `
 
 export const Title = styled.h1`
