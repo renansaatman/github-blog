@@ -1,5 +1,10 @@
+import { PostInfo } from "../../components/PostInfo";
+import { PostContainer } from "./styles";
+
 export function Post() {
   return (
-    <div>teste</div>
+    <PostContainer>
+      <PostInfo />
+    </PostContainer>
   )
 }
