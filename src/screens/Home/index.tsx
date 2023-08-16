@@ -10,6 +10,11 @@ export function Home() {
       <SearchForm />
       <Posts>
         <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
       </Posts>
     </HomeContainer>
   )

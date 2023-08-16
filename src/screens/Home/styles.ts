@@ -13,8 +13,10 @@ export const HomeContainer = styled.div`
 
 export const Posts = styled.div`
   margin-top: 3rem;
+  margin-bottom: 14.625rem;
 
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 `
