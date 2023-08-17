@@ -23,9 +23,11 @@ export const Avatar = styled.img`
 `
 
 export const ProfileContent = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-right: 2rem;
 `
 
 export const TextArea = styled.div`
@@ -35,6 +37,7 @@ export const TextArea = styled.div`
 `
 
 export const TitleAndGithubLink = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

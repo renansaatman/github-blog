@@ -14,36 +14,56 @@ import { Avatar,
         UserGroup 
 } from "./styles";
 
-export function ProfileCard() {
+interface ProfileCardProps {
+  avatar: string
+  bio: string
+  company: string | null
+  user: string
+  href: string
+  name: string
+  followers: number
+}
+
+export function ProfileCard({
+  avatar,
+  bio,
+  company,
+  user,
+  href,
+  name,
+  followers
+}: ProfileCardProps) {
   return (
     <Card>
-        <Avatar src="https://avatars.githubusercontent.com/u/29419643?v=4" alt="" />
+        <Avatar src={avatar} alt="" />
         <ProfileContent>
           <TextArea>
             <TitleAndGithubLink>
-              <Title>Renan Saatman</Title>
-              <GithubLink href="https://github.com/renansaatman" target="_blank">
+              <Title>{name}</Title>
+              <GithubLink href={href} target="_blank">
                 <LinkSpan>github</LinkSpan>
                 <LinkIcon />
               </GithubLink>
             </TitleAndGithubLink>
             <Text>
-              Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
+              {bio}
             </Text>
           </TextArea>
 
           <InfoArea>
             <Info>
               <Github />
-              <span>renansaatman</span>
+              <span>{user}</span>
             </Info>
-            <Info>
-            <Building />
-              <span>Rocketseat</span>
-            </Info>
+            {company && 
+              <Info>
+                <Building />
+                <span>{company}</span>
+              </Info>
+            }
             <Info>
               <UserGroup />
-              <span>32 seguidores</span>
+              <span>{followers} seguidores</span>
             </Info>
           </InfoArea>
         </ProfileContent>
