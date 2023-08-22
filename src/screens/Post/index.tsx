@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 import { PostInfo } from "../../components/PostInfo";
-import { Content, PostContainer } from "./styles";
+import { Content, Markdown, PostContainer } from "./styles";
 import { api } from "../../lib/axios";
 import { useEffect, useState } from "react";
 
-import ReactMarkdown from 'react-markdown'
 import { formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 
@@ -62,7 +61,7 @@ export function Post() {
       />
 
       <Content>
-        {post && <ReactMarkdown children={post.body}/>}
+        {post && <Markdown children={post.body}/>}
       </Content>
     </PostContainer>
   )
