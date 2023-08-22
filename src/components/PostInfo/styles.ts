@@ -24,6 +24,7 @@ export const CustomLink = styled(Link)`
   align-items: center;
   gap: .5rem;
   line-height: 1.6;
+  border: 1px solid transparent;
 
   &:hover {
     border-bottom: 1px solid ${props => props.theme.blue};
