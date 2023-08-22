@@ -12,7 +12,7 @@ Third challenge of the Rocketseat Ignite Course.
 
 ### :white_check_mark: What you can do:
 
-- Seach to a post
+- Seach for a post
 - Click on each post to see a full version 
 
 ### :camera: Screenshots
