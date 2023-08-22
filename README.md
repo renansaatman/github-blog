@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
+# Github Blog - Challenge 3 | Rocketseat :rocket:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Third challenge of the Rocketseat Ignite Course.
 
-Currently, two official plugins are available:
+### :hammer_and_wrench: Tools:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
+- React
+- Typescript
+- Styled Components
+- Axios
 
-## Expanding the ESLint configuration
+### :white_check_mark: What you can do:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Seach to a post
+- Click on each post to see a full version 
 
-- Configure the top-level `parserOptions` property like this:
+### :camera: Screenshots
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+:computer: For desktop
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p>
+    <img src="./src/assets/screenshots/1.png" />
+    <img src="./src/assets/screenshots/2.png" />
+    <img src="./src/assets/screenshots/3.png" />
+    <img src="./src/assets/screenshots/4.png" />
+    <img src="./src/assets/screenshots/5.png" />
+</p>
