@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { PostCardContainer, 
         SuperiorArea, 
         Title, 
@@ -8,14 +9,20 @@ import { PostCardContainer,
 interface PostCardProps {
   title: string
   body: string
+  number: number
+  createdAt: string
 }
 
-export function PostCard({ title, body }: PostCardProps) {
+export function PostCard({ title, body, number, createdAt }: PostCardProps) {
+  const navigate = useNavigate()
+  function handleOnClick() {
+    navigate(`/post/${number}`)
+  }
   return (
-    <PostCardContainer>
+    <PostCardContainer onClick={handleOnClick}>
       <SuperiorArea>
         <Title>{title}</Title>
-        <DateSpan>Há 1 dia</DateSpan>
+        <DateSpan>{createdAt}</DateSpan>
       </SuperiorArea>
       <Content>
         {body}

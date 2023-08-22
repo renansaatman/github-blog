@@ -12,7 +12,16 @@ import { Calendar,
         Comment
 } from "./styles";
 
-export function PostInfo() {
+interface PostInfoProps {
+  postUrl: string
+  title: string
+  comments: number
+  createdAt: string
+  user: string
+}
+
+export function PostInfo({postUrl, title, comments, createdAt, user}: PostInfoProps) {
+  
   return (
     <PostInfoContainer>
       <Links>
@@ -21,26 +30,26 @@ export function PostInfo() {
           <LinkSpan>voltar</LinkSpan>
         </CustomLink>
 
-        <CustomLink to='https://github.com/renansaatman'>
+        <CustomLink to={postUrl} target="_blank">
           <LinkSpan>ver no github</LinkSpan>
           <LinkIcon />
         </CustomLink>
       </Links>
 
-      <Title>JavaScript data types and data structures</Title>
+      <Title>{title}</Title>
 
       <InfoArea>
         <Info>
           <Github />
-          <span>renansaatman</span>
+          <span>{user}</span>
         </Info>
         <Info>
         <Calendar />
-          <span>Há 1 dia</span>
+          <span>{createdAt}</span>
         </Info>
         <Info>
           <Comment />
-          <span>5 comentários</span>
+          <span>{comments} comentários</span>
         </Info>
       </InfoArea>
     </PostInfoContainer>
