@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { api } from "../../lib/axios";
 import { Avatar, 
         Building, 
         Card, 
@@ -14,56 +16,60 @@ import { Avatar,
         UserGroup 
 } from "./styles";
 
-interface ProfileCardProps {
-  avatar: string
+interface userInfoProps {
+  avatar_url: string
   bio: string
-  company: string | null
-  user: string
-  href: string
+  company: string
+  login: string
+  html_url: string
   name: string
   followers: number
 }
 
-export function ProfileCard({
-  avatar,
-  bio,
-  company,
-  user,
-  href,
-  name,
-  followers
-}: ProfileCardProps) {
+export function ProfileCard() {
+  const [userInfo, setUserInfo] = useState({} as userInfoProps)
+
+  async function fetchUserInfo() {
+    const response = await api.get('/users/renansaatman')
+
+    setUserInfo(response.data)
+  }
+
+  useEffect(() => {
+    fetchUserInfo()
+  }, [])
+
   return (
     <Card>
-        <Avatar src={avatar} alt="" />
+        <Avatar src={userInfo.avatar_url} alt="" />
         <ProfileContent>
           <TextArea>
             <TitleAndGithubLink>
-              <Title>{name}</Title>
-              <GithubLink href={href} target="_blank">
+              <Title>{userInfo.name}</Title>
+              <GithubLink href={userInfo.html_url} target="_blank">
                 <LinkSpan>github</LinkSpan>
                 <LinkIcon />
               </GithubLink>
             </TitleAndGithubLink>
             <Text>
-              {bio}
+              {userInfo.bio}
             </Text>
           </TextArea>
 
           <InfoArea>
             <Info>
               <Github />
-              <span>{user}</span>
+              <span>{userInfo.login}</span>
             </Info>
-            {company && 
+            {userInfo.company && 
               <Info>
                 <Building />
-                <span>{company}</span>
+                <span>{userInfo.company}</span>
               </Info>
             }
             <Info>
               <UserGroup />
-              <span>{followers} seguidores</span>
+              <span>{userInfo.followers} seguidores</span>
             </Info>
           </InfoArea>
         </ProfileContent>

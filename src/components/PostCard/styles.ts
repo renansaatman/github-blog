@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ReactMarkdown from 'react-markdown'
 
 export const PostCardContainer = styled.div`
   width: 26rem;
@@ -42,12 +43,12 @@ export const DateSpan = styled.span`
   line-height: 1.6;
 `
 
-export const Content = styled.p`
+export const Content = styled(ReactMarkdown)`
   line-height: 1.6;
   color: ${props => props.theme["base-text"]};
 
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* Limite o texto a 3 linhas */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
     
